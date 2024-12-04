@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function user_registry_schema() {
+ $schema['user_registry'] = array(
+    'description' => 'Stores registered user information.',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'full_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'email' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'unique' => TRUE,
+      ),
+      'dni' => array(
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => TRUE,
+        'unique' => TRUE,
+      ),
+      'birth_date' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 20,
+
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}

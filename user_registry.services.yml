@@ -1,0 +1,4 @@
+services:
+  user_registry.settings:
+    class: Drupal\user_registry\UserRegistrySettings
+    arguments: ['@config.factory']
