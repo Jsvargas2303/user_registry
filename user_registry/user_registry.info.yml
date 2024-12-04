@@ -1,9 +1,0 @@
-name: 'User Registry'
-type: module
-description: 'Módulo para registrar usuarios, personalizar etiquetas y consultar usuarios por DNI.'
-core_version_requirement: ^10
-package: Custom
-dependencies:
-  - drupal:config
-  - drupal:rest
-  - drupal:user
